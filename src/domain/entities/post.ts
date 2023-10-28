@@ -7,6 +7,7 @@ export interface Post {
 		slug: string
 		content: string
 		createdAt: string
+		locale: string
 		cover: {
 			data: RemoteImage
 		}

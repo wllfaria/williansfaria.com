@@ -11,25 +11,32 @@ export class ApolloRequestClient implements RequestClient {
 		cache: new InMemoryCache(),
 	})
 
-	public async getPosts(): Promise<Post[]> {
+	public async getPosts(locale: string): Promise<Post[]> {
 		const { data } = await this.client.query<{ posts: { data: Post[] } }>({
 			query: GET_POSTS,
+			variables: {
+				locale,
+			},
 		})
 		return data.posts.data
 	}
-	public async getPost(postSlug: string): Promise<Post> {
+	public async getPost(postSlug: string, locale: string): Promise<Post> {
 		const { data } = await this.client.query<{ posts: { data: Post[] } }>({
 			query: GET_POST,
 			variables: {
 				slug: postSlug,
+				locale,
 			},
 		})
 		return data.posts.data[0]
 	}
 
-	public async getPostSlugs(): Promise<Post[]> {
+	public async getPostSlugs(locale: string): Promise<Post[]> {
 		const { data } = await this.client.query<{ posts: { data: Post[] } }>({
 			query: GET_POST_SLUGS,
+			variables: {
+				locale,
+			},
 		})
 		return data.posts.data
 	}

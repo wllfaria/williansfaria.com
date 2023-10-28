@@ -1,3 +1,5 @@
+import { i18n } from '@/app/i18n'
+
 export function getTimeToRead(postContent: string) {
 	const wordsPerMinute = 200
 	const numberOfWords = postContent.split(/\s/g).length
@@ -6,7 +8,7 @@ export function getTimeToRead(postContent: string) {
 	return readTime
 }
 
-export function getReadablePostDate(postDate: string) {
+export function getReadablePostDate(postDate: string, locale: string) {
 	const date = new Date(postDate)
-	return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+	return date.toLocaleDateString(locale || i18n.defaultLocale, { year: 'numeric', month: 'long', day: 'numeric' })
 }
