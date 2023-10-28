@@ -12,13 +12,13 @@ export class ApolloRequestClient implements RequestClient {
 	})
 
 	public async getPosts(): Promise<Post[]> {
-		const { data } = await this.client.query({
+		const { data } = await this.client.query<{ posts: { data: Post[] } }>({
 			query: GET_POSTS,
 		})
 		return data.posts.data
 	}
 	public async getPost(postSlug: string): Promise<Post> {
-		const { data } = await this.client.query({
+		const { data } = await this.client.query<{ posts: { data: Post[] } }>({
 			query: GET_POST,
 			variables: {
 				slug: postSlug,
@@ -28,7 +28,7 @@ export class ApolloRequestClient implements RequestClient {
 	}
 
 	public async getPostSlugs(): Promise<Post[]> {
-		const { data } = await this.client.query({
+		const { data } = await this.client.query<{ posts: { data: Post[] } }>({
 			query: GET_POST_SLUGS,
 		})
 		return data.posts.data

@@ -5,6 +5,8 @@ export interface Post {
 	attributes: {
 		title: string
 		slug: string
+		content: string
+		createdAt: string
 		cover: {
 			data: RemoteImage
 		}

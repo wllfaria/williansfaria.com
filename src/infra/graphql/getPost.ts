@@ -8,6 +8,7 @@ export const GET_POST = gql`
 				attributes {
 					title
 					slug
+					createdAt
 					cover {
 						data {
 							attributes {
@@ -15,6 +16,7 @@ export const GET_POST = gql`
 							}
 						}
 					}
+					content
 					excerpt
 					tags {
 						data {

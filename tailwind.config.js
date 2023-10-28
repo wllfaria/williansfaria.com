@@ -7,13 +7,13 @@ module.exports = {
 			colors: {
 				gray: {
 					100: '#F6F7EB',
-					800: '#393E41',
+					800: '#282828',
 				},
 				red: {
-					500: '#E94F37',
+					500: '#FB4934',
 				},
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }

@@ -8,14 +8,9 @@ export const GET_POSTS = gql`
 				attributes {
 					title
 					slug
-					cover {
-						data {
-							attributes {
-								url
-							}
-						}
-					}
 					excerpt
+					content
+					createdAt
 					tags {
 						data {
 							id
