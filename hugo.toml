@@ -1,0 +1,26 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Willians Faria'
+theme = "diary"
+DefaultContentLanguage = "en"
+googleAnalytics = "G-NCJJ4TMY34"
+
+[params]
+favicon = "/favicon.ico"
+
+[[menu.main]]
+url = "/posts"
+name = "Blog"
+weight = 1
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "github-dark"
+    tabWidth = 4
