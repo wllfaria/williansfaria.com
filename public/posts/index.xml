@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Willians Faria</title>
+    <link>https://williansfaria.com/posts/</link>
+    <description>Recent content in Posts on Willians Faria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Dec 2023 17:01:29 -0300</lastBuildDate>
+    <atom:link href="https://williansfaria.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://williansfaria.com/posts/test/</link>
+      <pubDate>Sat, 30 Dec 2023 17:01:29 -0300</pubDate>
+      <guid>https://williansfaria.com/posts/test/</guid>
+      <description>this is literally a test&#xA;local GroveConstants = require(&amp;#34;grove.constants&amp;#34;) local GroveState = require(&amp;#34;grove.state&amp;#34;) ---@class GroveFileSystem local GroveFileSystem = {} function GroveFileSystem:load_sessions() local file_path = vim.fn.stdpath(&amp;#34;data&amp;#34;) .. &amp;#34;/grove_history.json&amp;#34; if vim.fn.filereadable(file_path) == 0 then GroveFileSystem:_create_sessions_dir() end local file = io.open(file_path, &amp;#34;r&amp;#34;) if file then local content = file:read(&amp;#34;*a&amp;#34;) file:close() GroveState.projects = vim.fn.json_decode(content) end end function GroveFileSystem:_create_sessions_dir() local file_path = vim.fn.stdpath(&amp;#34;data&amp;#34;) .. &amp;#34;/grove_history.json&amp;#34; if vim.fn.filereadable(file_path) == 0 then local file = io.open(file_path, &amp;#34;w&amp;#34;) if file then file:write(&amp;#34;{}&amp;#34;) file:close() end end end ---@return GroveProject?</description>
+    </item>
+  </channel>
+</rss>
