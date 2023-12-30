@@ -4,8 +4,10 @@ $light-accent: lighten($color-accent, 10%);
 $deep-light-accent: lighten($color-accent, 30%);
 $dark-mode-text: darken(#fff, 10%);
 
-$dark-mode-back-container-background: #212121;
-$dark-mode-front-container-background: #282828;
+$dark-mode-back-container-background: #0d1117;
+$dark-mode-front-container-background: #0d1117;
+$nav-dark-background: #010409;
+$dark-mode-post-list-border-color: rgb(48, 54, 61);
 
 body.night {
   background: $dark-mode-back-container-background;
@@ -45,6 +47,8 @@ body.night {
       background: none;
       color: $dark-mode-text !important;
     }
+
+    border: 1px solid $dark-mode-post-list-border-color;
     color: $dark-mode-text !important;
   }
 
@@ -55,10 +59,10 @@ body.night {
     color: black !important;
   }
   .gt-header-textarea {
-    background: lighten($dark-mode-back-container-background, 20%)  !important;
+    background: lighten($dark-mode-back-container-background, 20%) !important;
   }
   .gt-header-preview {
-    background: lighten($dark-mode-back-container-background, 20%)  !important;
+    background: lighten($dark-mode-back-container-background, 20%) !important;
   }
 
   .side-container {
@@ -70,6 +74,7 @@ body.night {
     * {
       color: $dark-mode-text;
     }
+    background: $nav-dark-background;
     .nav-head {
       //border-right: 4px solid $color-accent;
       &:hover {
@@ -131,8 +136,12 @@ body.night {
     }
     .post-list-container {
       background: $dark-mode-front-container-background;
+      border-right: 1px solid $dark-mode-post-list-border-color;
+      border-left: 1px solid $dark-mode-post-list-border-color;
       @media screen and (max-width: $single-column-max-width) {
         background: $dark-mode-back-container-background;
+        border-right: unset;
+        border-left: unset;
       }
       &,
       > * {
@@ -203,7 +212,7 @@ body.night {
   .single-column-drawer-container {
     @media screen and (max-width: $single-column-max-width) {
       .drawer-content {
-        background: $dark-mode-front-container-background;
+        background: $nav-dark-background;
         .toc {
           background-color: lighten($dark-mode-front-container-background, 10%);
         }

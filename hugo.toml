@@ -7,11 +7,17 @@ googleAnalytics = "G-NCJJ4TMY34"
 
 [params]
 favicon = "/favicon.ico"
+enableReadingTime=true
 
 [[menu.main]]
 url = "/posts"
 name = "Blog"
 weight = 1
+
+[[menu.main]]
+url = "/bytes"
+name = "Bytes"
+weight = 2
 
 [markup]
   [markup.highlight]

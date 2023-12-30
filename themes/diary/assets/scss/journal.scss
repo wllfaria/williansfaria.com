@@ -1,7 +1,8 @@
-$color-accent: #1976d2;
+$color-accent: rgb(47, 129, 247);
 //$color-accent: #330000;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
+$post-list-border-color: rgba(128, 128, 128, 0.12);
 
 $default-font-list: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -148,6 +149,7 @@ pre {
   padding: 12px 15px;
   border-radius: 5px;
   font-family: $mono-font-list;
+  border: 1px solid $post-list-border-color;
   * {
     background: none;
     font-family: $mono-font-list !important;
@@ -207,7 +209,9 @@ a {
 }
 
 .animated-visibility {
-  transition: visibility 0s, opacity 0.5s linear;
+  transition:
+    visibility 0s,
+    opacity 0.5s linear;
   visibility: visible;
   opacity: 1;
 }
@@ -327,7 +331,9 @@ a {
   @media screen and (max-width: $single-column-max-width) {
     display: block !important;
     padding: 50px 20px 80px 20px;
-    transition: padding 0.5s ease-in-out, margin 0.5s ease-in-out;
+    transition:
+      padding 0.5s ease-in-out,
+      margin 0.5s ease-in-out;
     text-align: center;
     * {
       font-family: $sans-preferred-font-list;
@@ -610,12 +616,16 @@ a {
     min-height: 100vh;
     padding: 20px 0 20px 0;
     background: $front-container-background;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+
+    border-right: unset;
+    border-left: unset;
 
     @media screen and (max-width: $single-column-max-width) {
       min-height: unset;
       padding: 0;
       box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+      border-right: 1px solid $post-list-border-color;
+      border-left: 1px solid $post-list-border-color;
     }
     &,
     > * {
