@@ -57,13 +57,13 @@
 	{/if}
 
 	{#if twitter !== undefined}
-		<meta name="twitter:card" content={twitter.card} />
-		<meta name="twitter:site" content={twitter.site} />
-		<meta name="twitter:creator" content={twitter.creator} />
-		<meta name="twitter:title" content={twitter.title} />
-		<meta name="twitter:description" content={twitter.description} />
-		<meta name="twitter:image" content={twitter.image.url} />
-		<meta name="twitter:image:alt" content={twitter.image.alt} />
-		<meta name="twitter:url" content={twitter.url} />
+		<meta property="twitter:card" content={twitter.card} />
+		<meta property="twitter:site" content={twitter.site} />
+		<meta property="twitter:creator" content={twitter.creator} />
+		<meta property="twitter:title" content={twitter.title} />
+		<meta property="twitter:description" content={twitter.description} />
+		<meta property="twitter:image" content={twitter.image.url} />
+		<meta property="twitter:image:alt" content={twitter.image.alt} />
+		<meta property="twitter:url" content={twitter.url} />
 	{/if}
 </svelte:head>
