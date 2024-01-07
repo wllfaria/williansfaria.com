@@ -2,6 +2,31 @@
 	import '../app.css';
 </script>
 
+<svelte:head>
+	<script defer>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-P2G5L7SG');
+	</script>
+</svelte:head>
+
+<!-- svelte-ignore a11y-missing-attribute -->
+<noscript
+	><iframe
+		src="https://www.googletagmanager.com/ns.html?id=GTM-P2G5L7SG"
+		height="0"
+		width="0"
+		style="display:none;visibility:hidden"
+	></iframe></noscript
+>
+
 <div class="min-h-[100vh] p-5 text-slate-200 lg:max-w-[680px] lg:mx-auto">
 	<a
 		href="#main"
@@ -86,5 +111,18 @@
 				>
 			</a>
 		</div>
+
+		<nav class="mt-8" aria-label="Secondary website navigation">
+			<ul class="flex gap-5 justify-center">
+				<li>
+					<a href="/index.xml" class="underline decoration-purple-400 underline-offset-2">RSS</a>
+				</li>
+				<li>
+					<a href="/sitemap.xml" class="underline decoration-purple-400 underline-offset-2"
+						>Sitemap</a
+					>
+				</li>
+			</ul>
+		</nav>
 	</footer>
 </div>
