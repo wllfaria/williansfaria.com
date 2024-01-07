@@ -3,6 +3,7 @@
  * @property date {string}
  * @property description {string}
  * @property tags {string[]}
+ * @property draft {boolean}
  * @property categories {string[]}
  * @property minutesToRead {number}
  * @property secondsToRead {number}

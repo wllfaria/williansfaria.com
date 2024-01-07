@@ -12,9 +12,10 @@ async function getPosts() {
 	for (const [filePath, resolver] of Object.entries(postFiles)) {
 		const { metadata } = /** @type {Metadata}*/ (await resolver());
 		const path = filePath.replace('/src/content/', '').replace('.md', '');
+		if (metadata.draft) continue;
 		posts.push({ metadata, path });
 	}
-
+	posts.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date));
 	return posts;
 }
 

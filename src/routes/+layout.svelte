@@ -2,7 +2,7 @@
 	import '../app.css';
 </script>
 
-<div class="bg-base min-h-[100vh] p-5 text-slate-200">
+<div class="min-h-[100vh] p-5 text-slate-200 lg:max-w-[680px] lg:mx-auto">
 	<a
 		href="#main"
 		class="transition left-0 bg-indigo-400 text-primary-content underline-offset-2 underline underline-purple-400 absolute p-3 mx-5 -translate-y-20 focus:-translate-y-2"

@@ -22,6 +22,5 @@ export default function readingTime() {
 		const readingTime = timeToReadInSeconds(content);
 		file.data.fm.minutesToRead = file.data.fm.minutesToRead || readingTime.minutes;
 		file.data.fm.secondsToRead = file.data.fm.secondsToRead || readingTime.seconds;
-		console.log(file.data);
 	};
 }

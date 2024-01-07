@@ -21,7 +21,7 @@
 
 <section>
 	<div class="flex mt-10 mb-4 items-center gap-5">
-		<h3 class="text-xl font-bold font-serif">Latest Post</h3>
+		<h3 class="text-2xl font-bold font-serif">Latest Post</h3>
 		<a
 			href="/blog"
 			class="underline decoration-purple-300 underline-offset-2 text-purple-300 font-bold"
