@@ -1,7 +1,7 @@
 <script>
 	import PostList from '$lib/PostList.svelte';
 
-	/** @type {{posts: Array<Post>}} */
+	/** @type {{bytes: Array<Post>}} */
 	export let data;
 </script>
 
@@ -12,4 +12,8 @@
 	</p>
 </section>
 
-<PostList posts={data.posts} />
+{#if data.bytes.length === 0}
+	<p class="text-xl">No posts yet. Check back later!</p>
+{:else}
+	<PostList posts={data.bytes} />
+{/if}

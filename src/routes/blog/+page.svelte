@@ -12,7 +12,11 @@
 	</p>
 </section>
 
-<PostList posts={data.posts} />
+{#if data.posts.length === 0}
+	<p class="text-xl">No posts yet. Check back later!</p>
+{:else}
+	<PostList posts={data.posts} />
+{/if}
 
 <section class="mt-8">
 	<p>
