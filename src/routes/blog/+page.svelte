@@ -13,3 +13,12 @@
 </section>
 
 <PostList posts={data.posts} />
+
+<section class="mt-8">
+	<p>
+		Looking for
+		<a class="underline underline-offset-2 decoration-purple-400 text-purple-400" href="/"
+			>the way home?</a
+		>
+	</p>
+</section>

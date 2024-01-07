@@ -19,9 +19,7 @@
 				<li>
 					<a href="/blog" class="underline decoration-purple-400 underline-offset-2">Blog</a>
 				</li>
-				<li>
-					<a href="/bytes" class="underline decoration-purple-400 underline-offset-2">Bytes</a>
-				</li>
+				<!-- <li> <a href="/bytes" class="underline decoration-purple-400 underline-offset-2">Bytes</a> </li> -->
 				<li>
 					<a href="/about" class="underline decoration-purple-400 underline-offset-2">About</a>
 				</li>
@@ -46,7 +44,7 @@
 			<a href="https://github.com/wllfaria" rel="nofollow" target="_blank">
 				<svg
 					role="img"
-					class="h-5 fill-purple-400"
+					class="h-5 fill-purple-400 hover:fill-purple-200"
 					viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg"
 					><title>GitHub</title><path
@@ -57,7 +55,7 @@
 			<a href="https://linkedin.com/in/wllfaria" rel="nofollow" target="_blank">
 				<svg
 					role="img"
-					class="h-5 fill-purple-400"
+					class="h-5 fill-purple-400 hover:fill-purple-200"
 					viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg"
 					><title>LinkedIn</title><path
@@ -68,7 +66,7 @@
 			<a href="https://twitter.com/4wiru" rel="nofollow" target="_blank">
 				<svg
 					role="img"
-					class="h-5 fill-purple-400"
+					class="h-5 fill-purple-400 hover:fill-purple-200"
 					viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg"
 					><title>X</title><path
@@ -78,7 +76,7 @@
 			</a>
 			<a href="https://instagram.com/wllfaria" rel="nofollow" target="_blank">
 				<svg
-					class="h-5 fill-purple-400"
+					class="h-5 fill-purple-400 hover:fill-purple-200"
 					role="img"
 					viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg"

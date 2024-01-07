@@ -7,9 +7,7 @@
 
 <section class="mt-10 text-lg leading-8">
 	<h2 class="text-2xl font-bold font-serif">
-		I'm <a href="/about" class="underline decoration-purple-400 underline-offset-2"
-			>Willians Faria</a
-		>,
+		I'm <a href="/about" class="underline decoration-purple-400 underline-offset-2">Wiru</a>,
 	</h2>
 	<p class="mt-4">
 		My goal is to take you on a journey through the world of computers and programming. Well,
