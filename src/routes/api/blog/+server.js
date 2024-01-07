@@ -15,7 +15,7 @@ async function getPosts() {
 		if (metadata.draft) continue;
 		posts.push({ metadata, path });
 	}
-	posts.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date));
+	posts.sort((a, b) => new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime());
 	return posts;
 }
 
