@@ -1,3 +1,39 @@
+<script>
+	import Seo from '$lib/Seo.svelte';
+
+	const seoData = {
+		title: 'About',
+		description: 'A blog about programming, technology and my messy thoughts',
+		article: undefined,
+		openGraph: {
+			title: 'About',
+			description: 'A blog about programming, technology and my messy thoughts',
+			url: 'https://williansfaria.com/about',
+			type: 'website',
+			siteName: 'williansfaria.com',
+			locale: 'en_US',
+			image: {
+				url: 'https://williansfaria.com/favicon.png',
+				alt: 'Favicon that is a W letter'
+			}
+		},
+		twitter: {
+			title: 'About',
+			description: 'A blog about programming, technology and my messy thoughts',
+			site: '@4wiru',
+			card: 'summary_large_image',
+			creator: '@4wiru',
+			url: 'https://williansfaria.com/about',
+			image: {
+				url: 'https://williansfaria.com/favicon.png',
+				alt: 'Favicon that is a W letter'
+			}
+		}
+	};
+</script>
+
+<Seo {...seoData} />
+
 <h2 class="text-2xl font-bold font-serif mt-10 mb-8">About</h2>
 
 <section class="text-lg leading-8">

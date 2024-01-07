@@ -1,9 +1,42 @@
 <script>
 	import PostList from '$lib/PostList.svelte';
+	import Seo from '$lib/Seo.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
+
+	const seoData = {
+		title: 'williansfaria.com',
+		description: 'A blog about programming, technology and my messy thoughts',
+		article: undefined,
+		openGraph: {
+			title: 'williansfaria.com',
+			description: 'A blog about programming, technology and my messy thoughts',
+			url: 'https://williansfaria.com/',
+			type: 'website',
+			siteName: 'williansfaria.com',
+			locale: 'en_US',
+			image: {
+				url: 'https://williansfaria.com/favicon.png',
+				alt: 'Favicon that is a W letter'
+			}
+		},
+		twitter: {
+			title: 'williansfaria.com',
+			description: 'A blog about programming, technology and my messy thoughts',
+			site: '@4wiru',
+			card: 'summary_large_image',
+			creator: '@4wiru',
+			url: 'https://williansfaria.com/',
+			image: {
+				url: 'https://williansfaria.com/favicon.png',
+				alt: 'Favicon that is a W letter'
+			}
+		}
+	};
 </script>
+
+<Seo {...seoData} />
 
 <section class="mt-10 text-lg leading-8">
 	<h2 class="text-2xl font-bold font-serif">
