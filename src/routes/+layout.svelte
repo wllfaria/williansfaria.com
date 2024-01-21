@@ -44,7 +44,9 @@
 				<li>
 					<a href="/blog" class="underline decoration-purple-400 underline-offset-2">Blog</a>
 				</li>
-				<!-- <li> <a href="/bytes" class="underline decoration-purple-400 underline-offset-2">Bytes</a> </li> -->
+				<li>
+					<a href="/bytes" class="underline decoration-purple-400 underline-offset-2">Bytes</a>
+				</li>
 				<li>
 					<a href="/about" class="underline decoration-purple-400 underline-offset-2">About</a>
 				</li>
