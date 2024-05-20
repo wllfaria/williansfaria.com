@@ -25,10 +25,8 @@ export async function GET({ fetch, setHeaders }) {
 		'Content-Type': 'application/xml'
 	});
 	const postsRes = await fetch('/api/blog');
-	const bytesRes = await fetch('/api/bytes');
 
 	const posts = /** @type {Array<Post>} */ (await postsRes.json());
-	const bytes = /** @type {Array<Post>} */ (await bytesRes.json());
 
 	const site = 'https://williansfaria.com';
 
@@ -44,7 +42,6 @@ export async function GET({ fetch, setHeaders }) {
             <atom:link href="${site}/index.xml" rel="self" type="application/rss+xml" />
             
             ${renderPosts(posts, site)}
-            ${renderPosts(bytes, site)}
         </channel>
         </rss>
     `;
