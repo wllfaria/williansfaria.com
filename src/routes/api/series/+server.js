@@ -70,7 +70,7 @@ async function getSerie(serie) {
 		.andThen((f) => f.map((files) => Promise.all(files.map((file) => importFile(serie, file)))));
 
 	const posts = await result.unwrap().map((posts) => posts.filter((post) => !post.metadata.draft));
-	return posts.unwrap();
+	return posts.unwrapOr([]);
 }
 
 /** @type {import('./$types').RequestHandler} */
