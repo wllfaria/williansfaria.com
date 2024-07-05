@@ -151,3 +151,4 @@ Just be ready for a few bumps in the road, especially when hunting down
 information. Make the most of your as/ld/gdb tools, and yes, be prepared for
 some moments of frustration at the beginning. But remember, every struggle is
 a step toward mastering assembly, and the journey is absolutely worth it.
+

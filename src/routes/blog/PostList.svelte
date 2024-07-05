@@ -1,6 +1,6 @@
 <script>
 	import { shortDate } from '$lib';
-	/** @type {Array<Post>} */
+	/** @type {Post[]} */
 	export let posts;
 </script>
 
@@ -9,7 +9,7 @@
 		<p class="mb-1 text-sm text-gray-400">{shortDate(post.metadata.date)}</p>
 		<a
 			href="/{post.path}"
-			class="font-bold underline hover:text-purple-400 decoration-purple-300 hover:decoration-purple-400 underline-offset-4 font-serif text-xl"
+			class="font-bold hover:text-purple-400 decoration-purple-300 hover:decoration-purple-400 underline-offset-4 font-serif text-xl"
 		>
 			<p class="text-xl">{post.metadata.title}</p>
 		</a>

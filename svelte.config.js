@@ -5,15 +5,15 @@ import readingTime from './src/lib/readingTime.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: { adapter: adapter() },
-	extensions: ['.svelte', '.md'],
-	preprocess: [
-		vitePreprocess(),
-		mdsvex({
-			extensions: ['.md'],
-			remarkPlugins: [readingTime]
-		})
-	]
+    kit: { adapter: adapter() },
+    extensions: ['.svelte', '.md'],
+    preprocess: [
+        vitePreprocess(),
+        mdsvex({
+            extensions: ['.md'],
+            remarkPlugins: [readingTime]
+        })
+    ]
 };
 
 export default config;

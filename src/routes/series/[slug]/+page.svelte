@@ -1,8 +1,8 @@
 <script>
-	import PostList from './PostList.svelte';
+	import PostList from '../../blog/PostList.svelte';
 	import Seo from '$lib/Seo.svelte';
 
-	/** @type {{posts: Post[]}} */
+	/** @type {{ posts: Post[] }}*/
 	export let data;
 
 	const seoData = {
@@ -40,7 +40,9 @@
 
 <section class="mt-8">
 	{#if data.posts.length === 0}
-		<p class="text-xl">No posts yet. Check back later!</p>
+		<p class="text-center text-xl font-bold text-red-300">
+			Hold up, i'm still cooking stuff here, im sorry
+		</p>
 	{:else}
 		<PostList posts={data.posts} />
 	{/if}

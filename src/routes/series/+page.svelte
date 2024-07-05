@@ -1,13 +1,13 @@
 <script>
-	import PostList from './PostList.svelte';
 	import Seo from '$lib/Seo.svelte';
+	import SerieList from './SerieList.svelte';
 
-	/** @type {{posts: Post[]}} */
+	/** @type {{series: Serie[]}} */
 	export let data;
 
 	const seoData = {
-		title: 'Blog',
-		description: 'A blog about programming, technology and my messy thoughts',
+		title: 'Series',
+		description: 'A serie of articles about programming, technology and my messy thoughts',
 		article: undefined,
 		openGraph: {
 			title: 'Blog',
@@ -39,9 +39,11 @@
 <Seo {...seoData} />
 
 <section class="mt-8">
-	{#if data.posts.length === 0}
-		<p class="text-xl">No posts yet. Check back later!</p>
+	{#if data.series.length === 0}
+		<p class="text-center text-xl font-bold text-red-300">
+			Nothing but us chickens here. Check back later!
+		</p>
 	{:else}
-		<PostList posts={data.posts} />
+		<SerieList series={data.series} />
 	{/if}
 </section>

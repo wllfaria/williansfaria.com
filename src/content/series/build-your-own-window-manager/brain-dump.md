@@ -1,6 +1,6 @@
 ---
 title: Build your own window manager
-description: 
+description: asdasd
 tags: 
     - 'Rust'
     - 'Window Manager'
@@ -8,7 +8,7 @@ tags:
 categories:
     - 'Programming'
 date: "2024-01-01T16:35:00-03:00"
-draft: false
+draft: true
 ---
 
 Since I started using linux, one of the core components of my workflow always
@@ -188,5 +188,3 @@ window, in our case, we are trying to change attributes from the root window,
 which is the parent window to every other window our monitor will have. We are
 trying to change its attributes to add a new `EventMask`, which tells the server
 events we are interested in.
-
-
