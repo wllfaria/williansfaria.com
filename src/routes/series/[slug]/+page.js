@@ -2,9 +2,12 @@ import '$lib/asyncOption.js';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {
-    const slug = params.slug;
-    const res = await fetch(`/api/series?serie=${slug}`).ok()
-    const posts = /** @type {Option<PostMetadata[]>} */ (await res.unwrap().json().ok())
-    return { posts: posts.unwrap() };
-}
+	const slug = params.slug;
 
+	/** @type {Option<Post[]>} */
+	const posts = await (await fetch(`/api/series?serie=${slug}`).map(async (res) => res.json()))
+		.unwrap()
+		.ok();
+
+	return { posts: posts.unwrapOr([]) };
+}

@@ -1,13 +1,3 @@
-/**
- * Gruvbox dark theme
- *
- * Adapted from a theme based on:
- * Vim Gruvbox dark Theme (https://github.com/morhetz/gruvbox)
- *
- * @author Azat S. <to@azat.io>
- * @version 1.0
- */
-
 code[class*='language-'],
 pre[class*='language-'] {
 	color: #ebdbb2; /* fg1 / fg */
@@ -54,7 +44,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-	background: #1d2021; /* bg0_h */
+	background: #1f1d2e; /* bg0_h */
 }
 
 /* Inline code */
@@ -75,13 +65,17 @@ pre[class*='language-'] {
 .token.selector,
 .token.important,
 .token.atrule {
-	color: #fb4934; /* red2 */
+	color: #31748f; /* red2 */
+}
+
+.token.class-name {
+    color: #9ccfd8;
 }
 
 .token.operator,
 .token.punctuation,
 .token.attr-name {
-	color: #a89984; /* fg4 / gray1 */
+	color: #908caa; /* fg4 / gray1 */
 }
 
 .token.tag,
@@ -105,7 +99,7 @@ pre[class*='language-'] {
 
 .token.string,
 .token.char {
-	color: #b8bb26; /* green2 */
+	color: #f6c177; /* green2 */
 }
 
 .token.attr-value,
@@ -119,7 +113,7 @@ pre[class*='language-'] {
 }
 
 .token.function {
-	color: #fabd2f; /* yellow2 */
+	color: #ebbcba; /* yellow2 */
 }
 
 .token.regex {

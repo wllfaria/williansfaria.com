@@ -1,5 +1,5 @@
 ---
-title: Build your own window manager
+title: Brain Dump
 description: asdasd
 tags: 
     - 'Rust'
@@ -8,7 +8,7 @@ tags:
 categories:
     - 'Programming'
 date: "2024-01-01T16:35:00-03:00"
-draft: true
+draft: false
 ---
 
 Since I started using linux, one of the core components of my workflow always

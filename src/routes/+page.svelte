@@ -1,5 +1,6 @@
 <script>
 	import PostList from './blog/PostList.svelte';
+	import SerieList from './series/SerieList.svelte';
 	import Seo from '$lib/Seo.svelte';
 
 	/** @type {import('./$types').PageData} */
@@ -39,28 +40,32 @@
 <Seo {...seoData} />
 
 <section class="mt-10 text-lg leading-8">
-	<h1 class="text-2xl font-bold font-serif">
+	<h1 class="text-2xl font-bold font-reggae-one">
 		Hi, I'm <a href="/about" class="underline decoration-purple-400 underline-offset-2">Wiru</a>,
 	</h1>
 	<p class="mt-4">I build a lot of things and I'm trying to start sharing them...</p>
 </section>
 
+{#if !!data.series.length}
 <section>
 	<div class="flex mt-10 mb-4 items-center gap-5">
-		<h3 class="text-2xl font-bold font-serif">Latest Serie</h3>
+		<h3 class="text-2xl font-bold font-reggae-one">Latest Serie</h3>
 		<a href="/series" class="decoration-purple-300 underline-offset-2 text-purple-300 font-bold"
 			>» View all</a
 		>
 	</div>
-	<PostList posts={data.posts} />
+	<SerieList series={data.series} />
 </section>
+{/if}
 
+{#if !!data.posts.length}
 <section>
 	<div class="flex mt-10 mb-4 items-center gap-5">
-		<h3 class="text-2xl font-bold font-serif">Latest Posts</h3>
+		<h3 class="text-2xl font-bold font-reggae-one">Latest Posts</h3>
 		<a href="/blog" class="decoration-purple-300 underline-offset-2 text-purple-300 font-bold"
 			>» View all</a
 		>
 	</div>
 	<PostList posts={data.posts} />
 </section>
+{/if}

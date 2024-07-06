@@ -2,7 +2,18 @@ import '$lib/asyncOption.js';
 
 /**@type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-    const res = await fetch('/api/blog?limit=3').ok()
-    const posts = /** @type {Option<Post[]>} */ (await res.unwrap().json().ok())
-    return { posts: posts.unwrap() };
+	/** @type {Option<Post[]>} */
+	const posts = await (await fetch('/api/blog?limit=3').map(async (res) => res.json()))
+		.unwrap()
+		.ok();
+
+	/** @type {Option<Serie[]>} */
+	const series = await (await fetch('/api/series').map(async (res) => await res.json()))
+		.unwrap()
+		.ok();
+
+	return {
+		posts: posts.unwrapOr([]),
+		series: series.unwrapOr([])
+	};
 }

@@ -3,31 +3,49 @@
  * @returns string
  */
 function renderPosts(posts, site) {
-    return posts
-        .map(
-            (post) => `
+	return posts
+		.map(
+			(post) => `
             <url>
               <loc>${site}/${post.path}</loc>
               <lastmod>${post.metadata.date.split('T')[0]}</lastmod>
               <changefreq>monthly</changefreq>
             </url>
         `
-        )
-        .join('');
+		)
+		.join('');
 }
 
 /**@type {import('../$types').PageLoad} */
 export async function GET({ fetch, setHeaders }) {
-    setHeaders({
-        'Content-Type': 'application/xml'
-    });
-    const postsRes = await fetch('/api/blog').map(v => v);
+	setHeaders({
+		'Content-Type': 'application/xml'
+	});
+	const site = 'https://williansfaria.com';
 
-    const posts = /** @type {Option<Post[]>} */ (await postsRes.unwrap().json().map(v => v));
+	/** @type {Option<Post[]>} */
+	const posts = await (await fetch('/api/blog?limit=3').map(async (res) => res.json()))
+		.unwrap()
+		.ok();
 
-    const site = 'https://williansfaria.com';
+	/** @type {Post[]} */
+	let everySeriePost = [];
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+	/** @type {Option<Serie[]>} */
+	const series = await (await fetch('/api/series').map(async (res) => await res.json()))
+		.unwrap()
+		.ok();
+
+	for (const serie of series.unwrapOr([])) {
+		const slug = serie.meta.slug;
+		/** @type {Post[]} */
+		const seriePosts = (
+			await (await fetch(`/api/series?serie=${slug}`).map(async (res) => res.json())).unwrap().ok()
+		).unwrapOr([]);
+		everySeriePost = [...everySeriePost, ...seriePosts];
+	}
+
+	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
             <loc>${site}</loc>
@@ -41,11 +59,15 @@ export async function GET({ fetch, setHeaders }) {
             <loc>${site}/blog</loc>
           </url>
           <url>
+            <loc>${site}/series</loc>
+          </url>
+          <url>
             <loc>${site}/index.xml</loc>
           </url>
-          ${renderPosts(posts.unwrap(), site)}
+          ${renderPosts(posts.unwrapOr([]), site)}
+          ${renderPosts(everySeriePost, site)}
         </urlset>
     `;
 
-    return new Response(sitemap);
+	return new Response(sitemap);
 }

@@ -1,6 +1,7 @@
 import { visit } from 'unist-util-visit';
 
-/** @param {string} text
+/**
+ * @param {string} text
  * @returns {{minutes: number, seconds: number}}
  */
 function timeToReadInSeconds(text) {
@@ -14,6 +15,7 @@ function timeToReadInSeconds(text) {
 }
 
 export default function readingTime() {
+	// @ts-ignore
 	return (tree, file) => {
 		let content = '';
 		visit(tree, 'text', (node) => {

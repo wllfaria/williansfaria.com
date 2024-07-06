@@ -9,7 +9,7 @@
 	<header>
 		<time>{longDate(data.date)}</time>
 		<h2>{data.title}</h2>
-		<time>Get that coffee brewing; it's a quick {data.minutesToRead}-minute read!</time>
+		<time>{data.minutesToRead} minutes read</time>
 	</header>
 	<svelte:component this={data.content} />
 </article>

@@ -60,17 +60,39 @@ function importFile(serie, file) {
 
 /**
  * @param {string} serie
+ * @param {Post} post
+ * @returns {string}
+ * */
+function makePath(serie, post) {
+	return `series/${serie}/${post.metadata.title.replaceAll(' ', '-').toLowerCase()}`;
+}
+
+/**
+ * @param {string} filePath
+ * @param {string} serie
+ * @returns {Promise<Post[]>}
+ * */
+async function readDir(filePath, serie) {
+	return (
+		await fs
+			.readdir(filePath)
+			.map((files) => files.filter((f) => f.includes('.md')))
+			.andThen((f) => f.map((files) => Promise.all(files.map((file) => importFile(serie, file)))))
+	).unwrap();
+}
+
+/**
+ * @param {string} serie
  * @returns {Promise<Post[]>}
  * */
 async function getSerie(serie) {
 	const filePath = path.join('.', 'src', 'content', 'series', serie);
-	const result = await fs
-		.readdir(filePath)
-		.map((files) => files.filter((f) => f.includes('.md')))
-		.andThen((f) => f.map((files) => Promise.all(files.map((file) => importFile(serie, file)))));
-
-	const posts = await result.unwrap().map((posts) => posts.filter((post) => !post.metadata.draft));
-	return posts.unwrapOr([]);
+	return (await readDir(filePath, serie).map((res) => res.filter((post) => !post.metadata.draft)))
+		.unwrapOr([])
+		.map((post) => ({
+			...post,
+			path: makePath(serie, post)
+		}));
 }
 
 /** @type {import('./$types').RequestHandler} */
