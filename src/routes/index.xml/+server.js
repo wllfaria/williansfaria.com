@@ -1,3 +1,5 @@
+import '$lib/asyncOption.js';
+
 /**
  * @param {Array<Post>} posts
  * @param {string} site

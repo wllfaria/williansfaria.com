@@ -1,3 +1,5 @@
+import '$lib/asyncOption.js';
+
 /** @param {Array<Post>} posts
  * @param {string} site
  * @returns string
@@ -24,9 +26,7 @@ export async function GET({ fetch, setHeaders }) {
 	const site = 'https://williansfaria.com';
 
 	/** @type {Option<Post[]>} */
-	const posts = await (await fetch('/api/blog?limit=3').map(async (res) => res.json()))
-		.unwrap()
-		.ok();
+	const posts = await (await fetch('/api/blog').map(async (res) => res.json())).unwrap().ok();
 
 	/** @type {Post[]} */
 	let everySeriePost = [];

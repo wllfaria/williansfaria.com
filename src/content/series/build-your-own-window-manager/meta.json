@@ -2,6 +2,6 @@
     "name": "Build your own window manager",
     "slug": "build-your-own-window-manager",
     "description": "Have you ever thought about making your own window manager? Well, I did, and it was quite a journey.",
-    "draft": true,
+    "draft": false,
     "finished": false
 }
