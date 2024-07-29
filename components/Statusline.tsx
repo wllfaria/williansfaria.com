@@ -1,11 +1,28 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { allBlogs } from 'contentlayer/generated'
+
+export const generateStaticParams = async () => {
+  return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
+}
 
 const Statusline = () => {
   const [scrollPercentage, setScrollPercentage] = useState('TOP')
   const path = usePathname()
+
+  const timeToReadOrLabel = useMemo(() => {
+    if (path.includes('blog')) {
+      const maybePostSlug = path.replace('/blog/', '')
+      const maybePost = allBlogs.find((post) => post.slug === maybePostSlug)
+      if (!!maybePost) {
+        return maybePost.readingTime.text
+      } else {
+        return 'UTF-8'
+      }
+    }
+  }, [path])
 
   const translatePathName = (path: string) => {
     if (path === '/') return './home'
@@ -45,7 +62,7 @@ const Statusline = () => {
       <div className="flex-1 overflow-hidden bg-secondary px-4">
         <p className="overflow-hidden text-ellipsis whitespace-nowrap">{translatePathName(path)}</p>
       </div>
-      <div className="hidden bg-indigo px-4 sm:block">UTF-8</div>
+      <div className="hidden bg-indigo px-4 sm:block">{timeToReadOrLabel}</div>
       <div className="w-[100px] bg-purple px-4 text-center">{scrollPercentage}</div>
     </div>
   )
