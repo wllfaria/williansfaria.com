@@ -1,11 +1,11 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'wiru',
+  title: 'inside the computer',
   author: 'wiru',
   headerTitle: 'wiru',
   description: 'my silly puter place where I share deep nerdy things',
   language: 'en-us',
-  theme: 'dark', // system, dark or light
+  theme: 'dark',
   siteUrl: 'https://williansfaria.com',
   siteRepo: 'https://github.com/wllfaria/williansfaria.com',
   siteLogo: '/static/images/logo.png',
@@ -15,9 +15,9 @@ const siteMetadata = {
   x: 'https://twitter.com/4wiru',
   locale: 'en-US',
   search: {
-    provider: 'kbar', // kbar or algolia
+    provider: 'kbar',
     kbarConfig: {
-      searchDocumentsPath: `${process.env.BASE_PATH || ''}/search.json`, // path to load documents to search
+      searchDocumentsPath: `${process.env.BASE_PATH || ''}/search.json`,
     },
   },
 }

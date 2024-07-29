@@ -8,11 +8,8 @@ const Statusline = () => {
   const path = usePathname()
 
   const translatePathName = (path: string) => {
-    return (
-      {
-        '/': './home',
-      }[path] || `.${path}`
-    )
+    if (path === '/') return './home'
+    return `./blog/${path.toLowerCase().replaceAll('%20', '-').split('/').pop()}`
   }
 
   const getScrollPercentage = () => {
@@ -29,13 +26,13 @@ const Statusline = () => {
     const currentScroll = window.scrollY
     const maxScroll = Math.max(height - viewportHeight, 1)
     const result = Math.round((currentScroll / maxScroll) * 100)
-    const percentMap = {
-      '0%': 'TOP',
-      '100%': 'BOTTOM',
+    if (result >= 100) {
+      setScrollPercentage('BOTTOM')
+    } else if (result <= 0) {
+      setScrollPercentage('TOP')
+    } else {
+      setScrollPercentage(`${result}%`)
     }
-    const shaped = `${result}%`
-    const newScrollPercentage = percentMap[shaped] || shaped
-    setScrollPercentage(newScrollPercentage)
   }
 
   useEffect(() => {
@@ -45,10 +42,10 @@ const Statusline = () => {
   return (
     <div className="fixed bottom-0 flex w-[100%]">
       <div className="bg-pink px-4">STATUS</div>
-      <div className="flex-1 bg-secondary px-4">
-        <p>{translatePathName(path)}</p>
+      <div className="flex-1 overflow-hidden bg-secondary px-4">
+        <p className="overflow-hidden text-ellipsis whitespace-nowrap">{translatePathName(path)}</p>
       </div>
-      <div className="bg-indigo px-4">UTF-8</div>
+      <div className="hidden bg-indigo px-4 sm:block">UTF-8</div>
       <div className="w-[100px] bg-purple px-4 text-center">{scrollPercentage}</div>
     </div>
   )

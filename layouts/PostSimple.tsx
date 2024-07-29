@@ -37,7 +37,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                 <PageTitle>{title}</PageTitle>
               </div>
               <div>
-                <ul className="mt-4 flex justify-center gap-3">
+                <ul className="mt-4 flex flex-wrap justify-center gap-3">
                   {tags.map((tag) => (
                     <li key={tag}>
                       <Link href={`/tags/${tag}`} className="text-pink">

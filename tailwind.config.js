@@ -36,7 +36,10 @@ module.exports = {
           800: '#ff4d94',
           900: '#ff4d94',
         },
-        gray: colors.gray,
+        gray: {
+          ...colors.gray,
+          900: '#171717',
+        },
         pink: '#ff4d94',
         purple: '#8f2bf5',
         dark: '#171717',
