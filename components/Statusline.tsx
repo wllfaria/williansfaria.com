@@ -16,12 +16,9 @@ const Statusline = () => {
     if (path.includes('blog')) {
       const maybePostSlug = path.replace('/blog/', '')
       const maybePost = allBlogs.find((post) => post.slug === maybePostSlug)
-      if (maybePost) {
-        return maybePost.readingTime.text
-      } else {
-        return 'UTF-8'
-      }
+      if (maybePost) return maybePost.readingTime.text
     }
+    return 'UTF-8'
   }, [path])
 
   const translatePathName = (path: string) => {
