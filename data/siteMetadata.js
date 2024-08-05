@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'inside the computer',
+  title: 'beyond the wired',
   author: 'wiru',
   headerTitle: 'wiru',
   description: 'my silly puter place where I share deep nerdy things',
