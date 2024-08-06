@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'beyond the wired',
   author: 'wiru',
   headerTitle: 'wiru',
-  description: 'my silly puter place where I share deep nerdy things',
+  description: 'In the end, everyone is connected.',
   language: 'en-us',
   theme: 'dark',
   siteUrl: 'https://williansfaria.com',
