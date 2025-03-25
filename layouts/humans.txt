@@ -1,0 +1,9 @@
+/* TEAM */
+    Developer: wiru
+    Contact: hello [at] wiru.st
+
+/* SITE */
+	Last update: <ctx :text="$build.generated.formatHTTP()"></ctx>
+	Language: English
+	Doctype: HTML5
+	IDE: Neovim

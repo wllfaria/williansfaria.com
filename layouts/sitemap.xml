@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc :text="$site.host_url"></loc>
+        <lastmod :text="$build.generated.formatHTTP()"></lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <ctx :loop="$page.subpages()">
+    <url>
+        <loc :text="$site.host_url.addPath($loop.it.link())"></loc>
+        <lastmod :text="$loop.it.date.formatHTTP()"></lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    </ctx>
+</urlset>

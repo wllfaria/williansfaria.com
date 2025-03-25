@@ -3,6 +3,7 @@
 <head id="head">
   <link rel="stylesheet" href="$site.asset('article.css').link()">
   <link rel="stylesheet" href="$site.asset('syntax.css').link()">
+  <ctx :html="$page.custom.get('json_ld')"></ctx>
 </head>
 <main id="content" role="main">
   <div class="container">

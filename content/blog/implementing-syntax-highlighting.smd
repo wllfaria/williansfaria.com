@@ -5,6 +5,39 @@
 .author = "wiru",
 .layout = "article.shtml",
 .draft = true,
+.custom = {
+    "json_ld": \\<script type="application/ld+json">
+\\  {
+\\        "@context":"http://schema.org",
+\\        "@type": "Article",
+\\        "url": "https://wiru.st/blog/implementing-syntax-highlighting",
+\\        "headline": "Implementing syntax highlighting",
+\\        "dateCreated": "2024-08-04T23:13:00-03:00",
+\\        "datePublished": "2024-08-04T23:13:00-03:00",
+\\        "image": "https://wiru.st",
+\\        "dateModified": "2024-08-04T23:13:00-03:00",
+\\        "inLanguage": "en-US",
+\\        "isFamilyFriendly": "true",
+\\        "genre":["Software Development","Rust", "Syntax Highlighting", "Text Editors"],
+\\        "author": {
+\\            "@type": "Person",
+\\            "name": "wiru",
+\\            "url": "https://wiru.st"
+\\        },
+\\        "creator": {
+\\            "@type": "Person",
+\\            "name": "wiru",
+\\            "url": "https://wiru.st"
+\\        },
+\\        "keywords": [
+\\            "Software Development",
+\\            "Rust",
+\\            "Syntax Highlighting",
+\\            "Text Editors"
+\\        ],
+\\    }
+\\</script>
+}
 ---
 
 I'm a huge text editor nerd, I mean, we use them every day how would we not be

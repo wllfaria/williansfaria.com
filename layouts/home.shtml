@@ -5,7 +5,7 @@
   <div class="container mt-3xl">
     <div class="grid">
       <section class="grid-col-span-2">
-        <div style="position: sticky; top: 0;">
+        <div class="sticky top-0">
           <h1 class="text-step-8 text-title space-grotesk text-bolder text-primary">wiru<span class="kosugi-maru text-step-2">・うぃる</span></h1>
           <p id="title_desc" class="kosugi-maru text-step-3 text-secondary">
             記憶なんてただの記録。書き換えてしまえばいい。

@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head id="head">
     <meta charset="UTF-8">
     <base href="/wiru.st/">
-    <meta name="description" content="Zine: Fast, Scalable and Flexible Static Site Generator">
+    <meta name="description" content="$page.description">
+    <link type="text/plain" rel="author" href="$site.host_url.addPath('humans.txt')">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@4wiru">
     <meta name="twitter:author" content="@4wiru">
-    <meta name="twitter:description" content="Zine: Fast, Scalable and Flexible Static Site Generator">
-    <meta name="twitter:title" content="$page.title.suffix(' | Zine')">
+    <meta name="twitter:description" content="$page.description">
+    <meta name="twitter:title" content="$page.title.suffix(' | wiru.st')">
     <!-- <meta name="twitter:image" content="$site.host_url.addPath($site.asset('preview.png').link())"> -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="$page.title.suffix(' | Zine')">
+    <meta property="og:title" content="$page.title.suffix(' | wiru.st')">
     <!-- <meta property="og:image" content="$site.host_url.addPath($site.asset('preview.png').link())"> -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="$site.asset('images/apple-touch-icon.png').link()">
+    <link rel="icon" type="image/png" sizes="32x32" href="$site.asset('images/favicon-32x32.png').link()">
+    <link rel="icon" type="image/png" sizes="16x16" href="$site.asset('images/favicon-16x16.png').link()">
+    <link rel="manifest" href="$site.asset('images/site.webmanifest').link()">
+    <link rel="stylesheet" type="text/css" href="$site.asset('styles.css').link()">
+    <link rel="stylesheet" type="text/css" href="$site.asset('fonts.css').link()">
     <title id="title">
       <super>
       - wiru.st
     </title>
-    <link rel="stylesheet" type="text/css" href="$site.asset('styles.css').link()">
-    <link rel="stylesheet" type="text/css" href="$site.asset('fonts.css').link()">
     <super>
   </head>
   <body>

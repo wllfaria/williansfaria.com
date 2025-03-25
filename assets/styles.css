@@ -207,6 +207,14 @@ a:hover {
     flex-direction: column;
 }
 
+.sticky {
+    position: sticky;
+}
+
+.top-0 {
+    top: 0;
+}
+
 @media screen and (max-width: 48rem) {
     .grid {
         grid-template-columns: 1fr;

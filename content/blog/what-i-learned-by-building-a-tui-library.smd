@@ -1,0 +1,42 @@
+---
+.title = "What I learned by building a TUI library",
+.date = @date("2025-03-26T23:18:00-03:00"),
+.description = "A collection of lessons I learned while building a TUI library in Zig",
+.author = "wiru",
+.layout = "article.shtml",
+.draft = true,
+.custom = {
+    "json_ld": \\<script type="application/ld+json">
+\\  {
+\\        "@context":"http://schema.org",
+\\        "@type": "Article",
+\\        "url": "https://wiru.st/blog/what-i-learned-by-building-a-tui-library",
+\\        "headline": "What I learned by building a TUI library",
+\\        "dateCreated": "2025-03-26T23:18:00-03:00",
+\\        "datePublished": "2025-03-26T23:18:00-03:00",
+\\        "image": "https://wiru.st",
+\\        "dateModified": "2025-03-26T23:18:00-03:00",
+\\        "inLanguage": "en-US",
+\\        "isFamilyFriendly": "true",
+\\        "genre":["Software Development","Zig", "TUI", "Libraries"],
+\\        "author": {
+\\            "@type": "Person",
+\\            "name": "wiru",
+\\            "url": "https://wiru.st"
+\\        },
+\\        "creator": {
+\\            "@type": "Person",
+\\            "name": "wiru",
+\\            "url": "https://wiru.st"
+\\        },
+\\        "keywords": [
+\\            "Software Development",
+\\            "Zig",
+\\            "TUI",
+\\            "Libraries"
+\\        ],
+\\    }
+\\</script>
+}
+---
+asdasd

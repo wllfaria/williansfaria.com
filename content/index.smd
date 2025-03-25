@@ -1,7 +1,13 @@
 ---
-.title = "Homepage",
+.title = "Close the World... Open the Next.",
 .date = @date("2025-03-13T00:00:00"),
-.author = "Wiru",
+.author = "wiru",
+.description = "Close the World... Open the Next.",
 .layout = "home.shtml",
 .draft = false,
+.alternatives = [
+    { .name = "rss", .layout = "rss.xml", .output = "index.xml" },
+    { .name = "sitemap", .layout = "sitemap.xml", .output = "sitemap.xml" },
+    { .name = "humans", .layout = "humans.txt", .output = "humans.txt" },
+],
 ---
