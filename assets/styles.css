@@ -1,0 +1,224 @@
+:root {
+    --step--2: clamp(0.7813rem, 0.7775rem + 0.0188vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.925rem + 0.0625vw, 1rem);
+    --step-0: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.3075rem + 0.2125vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5534rem + 0.3331vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.8445rem + 0.4974vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.189rem + 0.719vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.5963rem + 1.0153vw, 3.8147rem);
+    --step-6: clamp(3.3592rem, 3.0774rem + 1.4091vw, 4.7684rem);
+    --step-7: clamp(4.0311rem, 3.6452rem + 1.9294vw, 5.9605rem);
+    --step-8: clamp(4.8373rem, 4.3146rem + 2.6133vw, 7.4506rem);
+
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.55rem + 0.0625vw, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8625rem + 0.0625vw, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.65rem + 0.1875vw, 1.875rem);
+    --space-l: clamp(2.25rem, 2.2rem + 0.25vw, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.3rem + 0.375vw, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.4rem + 0.5vw, 5rem);
+    --space-3xl: clamp(6.75rem, 6.6rem + 0.75vw, 7.5rem);
+
+    --space-3xs-2xs: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+    --space-2xs-xs: clamp(0.5625rem, 0.4875rem + 0.375vw, 0.9375rem);
+    --space-xs-s: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+    --space-s-m: clamp(1.125rem, 0.975rem + 0.75vw, 1.875rem);
+    --space-m-l: clamp(1.6875rem, 1.525rem + 0.8125vw, 2.5rem);
+    --space-l-xl: clamp(2.25rem, 1.95rem + 1.5vw, 3.75rem);
+    --space-xl-2xl: clamp(3.375rem, 3.05rem + 1.625vw, 5rem);
+    --space-2xl-3xl: clamp(4.5rem, 3.9rem + 3vw, 7.5rem);
+
+    --breakpoint-small: 24rem;
+    --breakpoint-medium: 48rem;
+    --breakpoint-large: 64rem;
+
+    --grid-max-width: 90rem;
+    --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.266rem + 4.2553vw, 2.5rem));
+    --grid-columns: 5;
+
+    --color-text: #fbfbfb;
+    --color-background: #171717;
+    --color-primary: #D27389;
+    --color-secondary: #bbbbbb;
+
+    --color-code-background: #222222;
+    --color-red: #F05E48;
+    --color-green: #99be70;
+    --color-yellow: #FAD566;
+    --color-blue: #86c1b9;
+    --color-purple: #72a59e;
+    --color-aqua: #72a59e;
+    --color-orange: #cfba8b;
+    --color-gray: #aaaaaa;
+
+    --font-family-space-grotesk: "Space Grotesk", sans-serif;
+    --font-family-hanken-grotesk: "Hanken Grotesk", sans-serif;
+    --font-family-kosugi-maru: "Kosugi Maru", sans-serif;
+    --font-family-recursive: "Recursive", sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+}
+
+.grid {
+    display: grid;
+    gap: var(--grid-gutter);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-col-span-3 {
+    grid-column: span 3;
+
+    @media screen and (max-width: var(--breakpoint-small)) {
+        grid-column: span 5;
+    }
+}
+
+.text-title {
+    letter-spacing: -0.10em;
+    line-height: 1;
+}
+
+.text-step-8 {
+    font-size: var(--step-8);
+}
+
+.text-step-3 {
+    font-size: var(--step-3);
+}
+
+.text-step-2 {
+    font-size: var(--step-2);
+    line-height: 1.25;
+}
+
+.text-step-1 {
+    font-size: var(--step-1);
+    line-height: 1.25;
+}
+
+.text-step-0 {
+    font-size: var(--step-0);
+}
+
+.text-step--1 {
+    font-size: var(--step--1);
+}
+
+.text-step--2 {
+    font-size: var(--step--2);
+}
+
+.text-bolder {
+    font-weight: 900;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.mt-s {
+    margin-top: var(--space-s);
+}
+
+.mt-l {
+    margin-top: var(--space-l);
+}
+
+.mt-xl {
+    margin-top: var(--space-xl);
+}
+
+.mt-3xl {
+    margin-top: var(--space-3xl);
+}
+
+.mb-s {
+    margin-bottom: var(--space-s);
+}
+
+.mb-xl {
+    margin-bottom: var(--space-xl);
+}
+
+.mb-2xl {
+    margin-bottom: var(--space-2xl);
+}
+
+.mb-3xl {
+    margin-bottom: var(--space-3xl);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+@media screen and (max-width: 48rem) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .text-step-7 {
+        font-size: var(--step-5);
+        line-height: 1.25;
+        letter-spacing: -0.05em;
+    }
+
+    .mb-2xl {
+        margin-bottom: var(--space-l);
+    }
+}

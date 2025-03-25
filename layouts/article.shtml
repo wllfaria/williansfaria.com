@@ -1,0 +1,48 @@
+<extend template="base.shtml">
+<title id="title" :text="$page.title"></title>
+<head id="head">
+  <link rel="stylesheet" href="$site.asset('article.css').link()">
+  <link rel="stylesheet" href="$site.asset('syntax.css').link()">
+</head>
+<main id="content" role="main">
+  <div class="container">
+    <nav aria-label="Breadcrumb">
+      <a href="$site.link()" class="space-grotesk back-link" aria-label="Back to home">
+        <span>
+           &lt; go back;
+        </span>
+      </a>
+    </nav>
+    <header>
+      <h1 :text="$page.description" class="text-primary text-step-7 space-grotesk mb-2xl"></h1>
+    </header>
+    <article :html="$page.content()" role="article"></article>
+    <footer aria-label="Article end" class="mb-s">
+      <div class="article-end flex justify-center flex-col align-center">
+        <img src="$site.asset('images/lain-dancing.gif').link()" width="94" alt="Lain Iwakura dancing" class="wiru">
+        <span id="footer_text" class="text-step--1 kosugi-maru text-primary">
+          あ、本当の 私 なんて、いないんだっけ。私は 私の 存在を 知っている 人の 中に だけ いる。けど、それ だって こう やって 今 しゃべっている 私は、私、だよね？この 私って、私って、誰？
+        </span>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const titleDesc = document.querySelector("#footer_text");
+    let hoverDelay;
+
+    titleDesc.addEventListener("mouseenter", () => {
+      hoverDelay = setTimeout(() => {
+        titleDesc.textContent = "Oh, there is no real me, I guess that's it. I only exist inside those people aware of my existence. But what about this me that I can hear talking right here and now? It's me, isn't it? This me that I hear talking... Who is it? Who's me?";
+        titleDesc.classList.remove("kosugi-maru");
+        titleDesc.classList.add("hanken-grotesk");
+      }, 500);
+    });
+
+    titleDesc.addEventListener("mouseleave", () => {
+      clearTimeout(hoverDelay);
+      titleDesc.textContent = "あ、本当の 私 なんて、いないんだっけ。私は 私の 存在を 知っている 人の 中に だけ いる。けど、それ だって こう やって 今 しゃべっている 私は、私、だよね？この 私って、私って、誰？";
+      titleDesc.classList.add("kosugi-maru");
+      titleDesc.classList.remove("hanken-grotesk");
+    });
+  </script>
+</main>
