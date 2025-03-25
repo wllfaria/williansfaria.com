@@ -5,9 +5,8 @@
     .minimum_zig_version = "0.15.0-dev.8+576573686",
     .dependencies = .{
         .zine = .{
-            // .url = "git+https://github.com/kristoff-it/zine#717b3afec72438ffed364e04c7ca33aa5d4fa5cb",
-            // .hash = "zine-0.0.0-ou6nINz4BQCRrTlsi6kI5wfCt6W_Rs9bahdI5ShUhPeG",
-            .path = "../zine",
+            .url = "git+https://github.com/wllfaria/zine#7a2289766cded7bd631bff8389573f7c2de72b27",
+            .hash = "zine-0.0.0-ou6nICk2BgCeRlFFn1bORLPUOp6y4EicEqdXcoVsooP4",
         },
     },
     .paths = .{

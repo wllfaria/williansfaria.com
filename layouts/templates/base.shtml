@@ -2,6 +2,7 @@
 <html>
   <head id="head">
     <meta charset="UTF-8">
+    <base href="/wiru.st/">
     <meta name="description" content="Zine: Fast, Scalable and Flexible Static Site Generator">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@4wiru">
