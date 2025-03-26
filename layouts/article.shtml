@@ -3,7 +3,12 @@
 <head id="head">
   <link rel="stylesheet" href="$site.asset('article.css').link()">
   <link rel="stylesheet" href="$site.asset('syntax.css').link()">
-  <ctx :html="$page.custom.get('json_ld')"></ctx>
+  <ctx url="$site.host_url.addPath($page.link())" genres="$page.custom.get('genres')" keywords="$page.custom.get('keywords')" date="$page.date.formatHTTP()">
+    <script
+      type="application/ld+json"
+      :html="$site.asset('jsonld.json').bytes().fmt($ctx.url, $page.title, $ctx.date, $ctx.date, $ctx.date, $ctx.genres, $ctx.keywords)"
+    ></script>
+  </ctx>
 </head>
 <main id="content" role="main">
   <div class="container">

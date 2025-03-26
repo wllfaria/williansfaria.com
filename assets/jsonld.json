@@ -1,0 +1,27 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "url": "{}",
+    "headline": "{}",
+    "dateCreated": "{}",
+    "datePublished": "{}",
+    "dateModified": "{}",
+    "inLanguage": "en-US",
+    "isFamilyFriendly": "true",
+    "genre": [
+        {}
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "wiru",
+        "url": "https://wiru.st"
+    },
+    "creator": {
+        "@type": "Person",
+        "name": "wiru",
+        "url": "https://wiru.st"
+    },
+    "keywords": [
+        {}
+    ]
+}
